@@ -6,6 +6,15 @@ const weatherInfoElement = document.getElementById('weatherInfo');
 const cityInput = document.getElementById('cityInput');
 const button = document.getElementById('getWeatherBtn');
 
+// Add an event listener to the input field for Enter key press.
+cityInput.addEventListener('keyup', function (event) {
+    if (event.key === 'Enter') {
+        // Call getWeather function when Enter key is pressed.
+        getWeather();
+    }
+});
+
+
 // Function to handle the retrieval of current weather and forecast data.
 function getWeather() {
     // Retrieve the trimmed city name from the input field.
