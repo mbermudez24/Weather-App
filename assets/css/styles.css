@@ -1,17 +1,17 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f8f8f8;
+    background: linear-gradient(135deg, #EBE8F5 0%, #DCD7EC 100%);
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    margin: 0;
+    min-height: 100vh;
 }
 
 .container {
     text-align: center;
     background-color: #fff;
-    padding: 30px;
+    padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -28,12 +28,11 @@ h1 {
 }
 
 input {
-    padding: 12px;
+    padding: .8rem;
     width: 60%;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-right: 10px;
-    font-size: 16px;
+    font-size: 1rem;
     transition: border-color 0.3s ease;
 }
 
@@ -43,13 +42,14 @@ input:focus {
 }
 
 button {
-    padding: 12px 20px;
+    padding: 1rem;
     cursor: pointer;
     background-color: #4caf50;
     color: #fff;
     border: none;
     border-radius: 5px;
     font-size: 16px;
+    margin: 1rem 0 0;
     transition: background-color 0.3s ease;
 }
 
@@ -58,8 +58,8 @@ button:hover {
 }
 
 #weatherInfo {
-    margin-top: 30px;
-    padding: 20px;
+    margin-top: 1.8rem;
+    padding: 1.2rem;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: black;
@@ -73,9 +73,10 @@ p {
 .forecast-container {
     display: flex;
     justify-content: space-around;
-    margin-top: 20px;
+    margin-top: 1.2rem;
     animation: fadeIn 1s ease-in-out;
 }
+
 
 .forecast-item {
     flex: 1;
@@ -94,9 +95,22 @@ p {
 
 /* Responsive Styles */
 @media (max-width: 600px) {
+
+    body {
+        display: block;
+        height: max-content;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1.5rem;
+    }
+
+
     input {
-        width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: .8rem;
     }
 
     button {
@@ -109,6 +123,13 @@ p {
 
     .forecast-item {
         margin: 10px 0;
+    }
+
+    #weatherInfo {
+        text-align: center;
+        margin-top: 1rem;
+        padding: 1rem;
+        width: stretch;
     }
 }
 

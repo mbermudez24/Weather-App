@@ -10,6 +10,7 @@ const button = document.getElementById('getWeatherBtn');
 cityInput.addEventListener('keyup', function (event) {
     if (event.key === 'Enter') {
         // Call getWeather function when Enter key is pressed.
+        weatherInfoElement.style.display = 'block'
         getWeather();
     }
 });
